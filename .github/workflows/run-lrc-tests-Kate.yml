@@ -28,13 +28,11 @@ on:
 
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: A job to say hello
     steps:
       # To use this repository's private action,
       # you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Run test in LoadRunner Cloud
         uses: MicroFocus/lrc-gh-action@v1
         id: lrc_run_test
